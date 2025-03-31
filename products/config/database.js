@@ -2,11 +2,11 @@ const mongoose = require('mongoose');
 
 const connectDB = async () => {
   try {
-    await mongoose.connect('mongodb://localhost:27017/cleaning_products_db', {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-      useCreateIndex: true,
-      useFindAndModify: false
+    await mongoose.connect('mongodb+srv://xshinemo:xshinemo@xshimemo.tp3rjxn.mongodb.net/', {
+      // useNewUrlParser: true,
+      // useUnifiedTopology: true,
+      // useCreateIndex: true,
+      // useFindAndModify: false
     });
     console.log('MongoDB connected successfully');
   } catch (error) {
