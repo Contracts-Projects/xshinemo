@@ -28,6 +28,11 @@ const userSchema = new mongoose.Schema({
     type: String, 
     required: [true, 'Address is required']
   },
+  role: {
+    type: String,
+    enum: ['customer', 'admin'],
+    default: 'customer'
+  },
   isRegistered: { 
     type: Boolean, 
     default: false 
