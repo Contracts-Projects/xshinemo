@@ -33,9 +33,6 @@ exports.registerUser = asyncHandler(async (req, res) => {
     isRegistered: true
   });
 
-  // Generate token
-  const token = generateToken(user._id);
-
   res.status(201).json({
     success: true,
     message: 'User registered successfully',
@@ -44,8 +41,7 @@ exports.registerUser = asyncHandler(async (req, res) => {
       email: user.email,
       name: user.name,
       lastName: user.lastName
-    },
-    token
+    }
   });
 });
 
@@ -58,6 +54,9 @@ exports.loginUser = asyncHandler(async (req, res) => {
   
   // Check if user exists and password is correct
   if (user && (await user.comparePassword(password))) {
+
+    const token =  generateToken(user._id)
+
     res.json({
       success: true,
       user: {
@@ -66,8 +65,15 @@ exports.loginUser = asyncHandler(async (req, res) => {
         name: user.name,
         lastName: user.lastName
       },
-      token: generateToken(user._id)
+     token
     });
+
+    // REMEMBER TO REMOVE THE CLG
+
+    console.log(`Succesfully Signed In : ${user.email}`)
+    console.log(`Token: ${token}`)
+
+
   } else {
     res.status(401).json({
       success: false,
