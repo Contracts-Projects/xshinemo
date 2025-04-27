@@ -70,33 +70,33 @@ The application uses various configuration settings that can be modified:
 
 ### Products
 
-- `GET /api/products` - Get all products
-- `GET /api/products/:id` - Get a single product
-- `POST /api/products` - Create a new product
-- `PUT /api/products/:id` - Update a product
-- `DELETE /api/products/:id` - Delete a product
+- `GET https://xshinemo.onrender.com/api/products` - Get all products
+- `GET https://xshinemo.onrender.com/api/products/:id` - Get a single product
+- `POST https://xshinemo.onrender.com/api/products` - Create a new product
+- `PUT https://xshinemo.onrender.com/api/products/:id` - Update a product
+- `DELETE https://xshinemo.onrender.com/api/products/:id` - Delete a product
 
 ### Cart
 
-- `GET /api/cart` - Get cart contents
-- `POST /api/cart/add` - Add item to cart
-- `PUT /api/cart/update/:productId` - Update cart item quantity
-- `DELETE /api/cart/remove/:productId` - Remove item from cart
-- `DELETE /api/cart/clear` - Clear entire cart
+- `GET https://xshinemo.onrender.com/api/cart` - Get cart contents
+- `POST https://xshinemo.onrender.com/api/cart/add` - Add item to cart
+- `PUT https://xshinemo.onrender.com/api/cart/update/:productId` - Update cart item quantity
+- `DELETE https://xshinemo.onrender.com/api/cart/remove/:productId` - Remove item from cart
+- `DELETE https://xshinemo.onrender.com/api/cart/clear` - Clear entire cart
 
 ### Checkout
 
-- `GET /api/checkout/shipping-options` - Get shipping options
-- `POST /api/checkout/validate` - Validate checkout details
-- `POST /api/checkout` - Process checkout
+- `GET https://xshinemo.onrender.com/api/checkout/shipping-options` - Get shipping options
+- `POST https://xshinemo.onrender.com/api/checkout/validate` - Validate checkout details
+- `POST https://xshinemo.onrender.com/api/checkout` - Process checkout
 
 ### Users
 
-- `POST /api/users/register` - Register a new user
-- `POST /api/users/login` - Login user
-- `GET /api/users/profile` - Get user profile
-- `PUT /api/users/profile` - Update user profile
-- `GET /api/users/orders` - Get user orders
+- `POST https://xshinemo.onrender.com/api/users/register` - Register a new user
+- `POST https://xshinemo.onrender.com/api/users/login` - Login user
+- `GET https://xshinemo.onrender.com/api/users/profile` - Get user profile
+- `PUT https://xshinemo.onrender.com/api/users/profile` - Update user profile
+- `GET https://xshinemo.onrender.com/api/users/orders` - Get user orders
 
 ## Database Structure
 
