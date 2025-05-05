@@ -17,8 +17,8 @@ router.get("/:id", getProductById);
 
 // CREATE new product
 router.post("/", 
-// protect,
-//  adminOnly,
+protect,
+ adminOnly,
   createProduct);
 
 // UPDATE product
